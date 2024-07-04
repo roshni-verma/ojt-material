@@ -1,0 +1,25 @@
+Q.1 what is supervised learning,and how does it differ from unsupervised learning?
+mathematical component write the general form of a supervised learning model.explain the role of the loss functionL(y,y^) in traing the model.
+
+SUPERVISED LEARNING- supervised learning is a labeled data.
+UNSUPERVISED LEARNING - Unsupervised learning is unlabeled data.
+Supervised learning is a type of machine learning where the model is trained using labeled data. 
+ "labeled" means that each training example is paired with an output label.
+Examples include classification and regression tasks.
+
+Unsupervised Learning:Uses unlabeled data.
+The goal is to identify patterns or structure in the data.
+Examples include clustering and dimensionality reduction.
+
+The loss function L(y, y^ ) quantifies how well the model's predictions y^ match the true labels y.
+
+
+Q5. UNSUPERVISED LEARNING:- unsupervised learning is a labeled data.
+the goal is to identify patterns or structure in the data.
+ex-include clustering and dimensionlity reduction. 
+
+Two real world application:-1.natural language processing.
+2.image and video analysis.
+
+Q4. svm (support vector machine) is used to classify data by finding the optimal decision boundary that maximally separated diffrent classes. 
+ The kernel trick is a method used in SVM to enable them to classify non-linear data using a linear classifier.

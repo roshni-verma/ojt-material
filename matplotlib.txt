@@ -1,0 +1,99 @@
+matpoltlib
+
+Its is used for plotting and visulaising.
+each data in a dataset can be knowns as datapoints.
+
+features of matplotlib?
+
+1. Versatlity
+2.integration
+3.customztion
+4.output
+
+
+
+question:- (weather_data.csv)
+
+CSV file containing historical weather data for a city. The file has the following columns:
+ 
+Date: The date of the recorded data.
+Temperature: The average temperature of the day in Celsius.
+Precipitation: The precipitation in mm.
+WindSpeed: The average wind speed in km/h.
+
+The task is to:
+ 
+Load the data into a pandas DataFrame.
+Perform data cleaning and preprocessing:
+Check for and handle missing values.
+Convert the Date column to a datetime type.
+Use NumPy to calculate the following statistics for the temperature:
+Mean
+Standard deviation
+Maximum
+Minimum
+Generate a time series plot using Matplotlib to show the temperature trend over time.
+Create a bar chart to show the average monthly precipitation.
+Plot a scatter plot to examine the relationship between wind speed and temperature.
+
+
+
+ solution:-
+
+plt.scatter(df['Temperature'],df['Precipitation'], c='blue')
+plt.title('Scatter plot of Precipitation vs Temperature (°C)')
+plt.xlabel('Temperature')
+plt.ylabel(' Precipitation')
+
+
+
+plt.scatter(df['Temperature'],df['WindSpeed'], c='blue')
+plt.title('Scatter plot of WindSpeed vs Temperature (°C)')
+plt.xlabel('Temperature')
+plt.ylabel(' WindSpeed')
+plt.figure(figsize=(10,5))
+
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Assuming you have a DataFrame named 'weather_data' with columns 'Date' and 'Precipitation'
+# Load your data or replace it with your actual data
+weather_data = pd.read_csv('weather_data.csv')
+
+# Convert the 'Date' column to datetime format if it's not already in datetime format
+# Convert the 'Date' column to datetime format with corrected format string
+df['Date'] = pd.to_datetime(df['Date'], format='%d-%m-%Y')
+print(df)
+
+# Extract month from the date
+df['Month'] = df['Date'].dt.month
+print(df)
+
+# Group by month and calculate the average precipitation
+average_precipitation = df.groupby('Month')['Precipitation'].mean()
+print(df)
+
+# Plotting
+plt.figure(figsize=(10, 6))
+average_precipitation.plot(kind='bar', color='skyblue')
+plt.title('Average Monthly Precipitation')
+plt.xlabel('Month')
+plt.ylabel('Average Precipitation')
+plt.show()
+
+
+
+project for ai:-
+Problem
+Data Collection
+Data Preprocessing
+Model Selection
+Model Training and Evaluation
+Model Tuning
+Implementation
+Validation and Testing
+Deployment
+Monitoring and Maintenance
+

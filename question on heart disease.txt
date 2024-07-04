@@ -1,0 +1,21 @@
+Use logistic regression to predict whether a patient has heart disease based on various health indicators.
+
+Dataset:
+The dataset contains information about patients, including various health indicators such as age, gender, cholesterol levels, 
+blood pressure, etc. (You can use a dataset like the Heart Disease UCI dataset or any similar dataset).
+
+1.Load the dataset.
+2.Handle missing values appropriately.
+3.Encode categorical variables (e.g., gender) using one-hot encoding.
+4.Scale numerical features (e.g., age, cholesterol, blood pressure).
+5.Perform basic exploratory data analysis to understand the distribution of the data and relationships between variables.
+6.Visualize correlations between features and the target variable (presence or absence of heart disease)
+7.Split the data into training and testing sets (e.g., 80% training, 20% testing).
+8.Train a logistic regression model on the training set.
+9.Ensure that you include regularization (L1, L2, or both) in your model to prevent overfitting.
+10.Evaluate the model using accuracy, precision, recall, F1-score, and ROC-AUC on the test set.
+11.Plot the ROC curve and calculate the AUC value.
+12.Interpret the coefficients of the logistic regression model.
+13.Calculate the odds ratios for the features and explain what they imply about the likelihood of having heart disease.
+
+
