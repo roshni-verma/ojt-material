@@ -1,0 +1,59 @@
+                                          DEEP LEARNING
+
+What is a neural network?
+A neural network is a machine learning program, or model, that makes decisions in a manner similar to the human brain, by using processes that mimic the 
+way biological neurons work together to identify phenomena, weigh options and arrive at conclusions.
+
+
+
+
+1. Artificial Neural Network: Artificial Neural Network (ANN) is a type of neural network that is based on 
+a Feed-Forward strategy. It is called this because they pass information through the nodes continuously 
+till it reaches the output node. This is also known as the simplest type of neural network. 
+
+
+Some advantages of ANN :
+Ability to learn irrespective of the type of data (Linear or Non-Linear).
+ANN is highly volatile and serves best in financial time series forecasting.
+
+Some disadvantages of ANN :
+
+The simplest architecture makes it difficult to explain the behavior of the network.
+This network is dependent on hardware.
+
+2. Biological Neural Network: Biological Neural Network (BNN) is a structure that consists of Synapse, 
+dendrites, cell body, and axon. In this neural network, the processing is carried out by neurons. Dendrites 
+receive signals from other neurons, Soma sums all the incoming signals and axon transmits the signals to 
+other cells. 
+
+Some advantages of BNN :  
+
+The synapses are the input processing element.
+It is able to process highly complex parallel inputs.
+
+Some disadvantages of BNN :
+
+There is no controlling mechanism.
+Speed of processing is slow being it is is complex.
+
+
+A feedforward neural network (FNN) is a type of artificial neural network, in which the neurons are 
+arranged in layers, and the information flows only in one direction, from the input layer to the output 
+layer, without any feedback connections.
+
+A graphics processing unit, sometimes known as a GPU, is a specialized electronic circuit designed to
+ render graphics and images on a computer or other digital device fast and effectively.
+
+
+What Is Backpropagation?
+Backpropagation is the essence of neural net training. It is the practice of fine-tuning the weights of a 
+neural net based on the error rate (i.e. loss) obtained in the previous epoch (i.e. iteration.) Proper tuning of the weights ensures lower error rates, making the model reliable by increasing its generalization.
+
+
+Parameters	                        ANN	                                  BNN
+
+
+
+Structure 	                     input,weight,output,hidden layer          dendrites
+
+

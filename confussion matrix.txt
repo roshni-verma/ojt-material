@@ -1,0 +1,88 @@
+                                               confussion matrix
+
+
+
+av= actual value
+pv= predicted value
+
+PV and AV is No = Truly Negative
+PV IS YES AND AV IS NO = False Positive
+AV is Yes and PV is No = False Negative
+AV is yes and PV is Yes = Truly positive
+
+
+
+Accuracy= TP+TN/TP+TN+FP+FN
+
+
+precision = TP/TP+FP
+
+RECALL = TP/TP+FN
+
+
+F1-SCORE = 2*Precision*Recall/precision+Recall
+
+
+QUESTION-1
+
+age,gender,cholesterol,bp,smoking,diabetes,exercise,heart_attack
+55,male,220,140,yes,no,yes,1
+60,female,180,130,no,yes,no,1
+45,male,190,110,yes,no,yes,0
+50,female,200,120,no,no,yes,0
+65,male,230,150,yes,yes,no,1
+ 
+Do the prediction of heart attack from the above sample dataset with logistic regression methods and find the confusion Metrix, accuracy, precision, 
+recall and f1score of the above.
+
+#import liabrary
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import LabelEncoder
+from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, recall_score, f1_score
+
+# Define the dataset
+data = {
+    'age': [55, 60, 45, 50, 65],
+    'gender': ['male', 'female', 'male', 'female', 'male'],
+    'cholesterol': [220, 180, 190, 200, 230],
+    'bp': [140, 130, 110, 120, 150],
+    'smoking': ['yes', 'no', 'yes', 'no', 'yes'],
+    'diabetes': ['no', 'yes', 'no', 'no', 'yes'],
+    'exercise': ['yes', 'no', 'yes', 'yes', 'no'],
+    'heart_attack': [1, 1, 0, 0, 1]
+}
+
+# Convert to DataFrame
+df = pd.DataFrame(data)
+
+# Preprocess the data
+label_encoder = LabelEncoder()
+df['gender'] = label_encoder.fit_transform(df['gender'])
+df['smoking'] = label_encoder.fit_transform(df['smoking'])
+df['diabetes'] = label_encoder.fit_transform(df['diabetes'])
+df['exercise'] = label_encoder.fit_transform(df['exercise'])
+
+# Split the dataset into features and target variable
+X = df.drop('heart_attack', axis=1)
+y = df['heart_attack']
+
+# Since the dataset is small, we'll use the same data for both training and testing
+X_train, X_test, y_train, y_test = X, X, y, y
+
+# Train the logistic regression model
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+# Make predictions
+y_pred = model.predict(X_test)
+
+# Evaluate the model
+conf_matrix = confusion_matrix(y_test, y_pred)
+accuracy = accuracy_score(y_test, y_pred)
+precision = precision_score(y_test, y_pred)
+recall = recall_score(y_test, y_pred)
+f1 = f1_score(y_test, y_pred)
+
+(conf_matrix, accuracy, precision, recall, f1)

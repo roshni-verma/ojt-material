@@ -168,3 +168,12 @@ Step 5: Perform Data Transformation
 Step 6: Visualize Data Relationships
 Step 7: Handling Outliers
 Step 8: Communicate Findings and Insights
+
+
+DEEP LEARNING
+
+
+EPOCHS-how many times the model is trained
+
+LEARNING RATE-
+when training a machine learning model, it decides how big the steps are when adjusting the model to better fit the data
